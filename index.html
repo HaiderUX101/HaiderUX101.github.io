@@ -1,24 +1,68 @@
 <!DOCTYPE html>
-<html, lang="en">
-    <head>
-        <title>Resume</title>
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-        <meta name="Haider" content="My CV" > 
-    </head>
-    <body>
-        <!--This is a comment for you to understand-->
-        <h1>Machine Learning Engineer</h1>
-        <image src="https://media.cntraveler.com/photos/571945e380cf3e034f974b7d/master/pass/waterfalls-Seljalandsfoss-GettyImages-457381095.jpg"> </image>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Haider">
+    <title>HTML Tutorial</title>
+</head>
+<body>
+    <!-- HTML Tutorial Section -->
+    <section id="html-tutorial">
+        <h1>Introduction to HTML</h1>
         <p>
-            
-            I want to get a job in New Zealand <br><hr> that helps me in expressing my potential.
-            I am a great coder backed by credentials such as LeetCode, Kaggle and Github Contributions 
-            <a href="https://Google.com">Google</a>
-
+            HTML stands for <strong>Hyper Text Markup Language</strong> and is the backbone of most websites. 
+            It provides the structure of a webpage by using a series of elements and tags.
         </p>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <p
-    </body>
-
+        
+        <h2>Basic Structure of an HTML Document</h2>
+        <p>
+            Every HTML document begins with the <code>&lt;!DOCTYPE html&gt;</code> declaration, which tells the browser to render the page using HTML5. 
+            The rest of the document is divided into two main parts:
+        </p>
+        <ul>
+            <li><strong>Head Section</strong>: Contains meta-information, the title, links to CSS files, scripts, etc.</li>
+            <li><strong>Body Section</strong>: Contains the actual content of the webpage that users see.</li>
+        </ul>
+        
+        <h2>Common HTML Elements</h2>
+        <ul>
+            <li><code>&lt;html&gt;</code>: The root element that encloses the entire HTML document.</li>
+            <li><code>&lt;head&gt;</code>: Contains metadata and links to resources.</li>
+            <li><code>&lt;title&gt;</code>: Specifies the title of the document, which appears in the browser tab.</li>
+            <li><code>&lt;body&gt;</code>: Contains all the content that is displayed to the user.</li>
+            <li><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>: Define headings, with <code>&lt;h1&gt;</code> being the most important.</li>
+            <li><code>&lt;p&gt;</code>: Defines a paragraph of text.</li>
+            <li><code>&lt;a&gt;</code>: Creates hyperlinks to other pages or resources.</li>
+            <li><code>&lt;img&gt;</code>: Embeds images into the page. Remember to use the <code>alt</code> attribute to provide alternative text.</li>
+        </ul>
+        
+        <h2>Example of a Simple HTML Page</h2>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;My First HTML Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to HTML!&lt;/h1&gt;
+    &lt;p&gt;This is a simple paragraph to demonstrate basic HTML elements.&lt;/p&gt;
+    &lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+        
+        <h2>Best Practices</h2>
+        <ul>
+            <li>Always declare the document type at the beginning.</li>
+            <li>Ensure that your HTML is well-formed with proper opening and closing tags.</li>
+            <li>Use semantic elements (like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>) to improve accessibility and SEO.</li>
+            <li>Include the <code>alt</code> attribute in images to aid users who rely on screen readers.</li>
+        </ul>
+        
+        <p>
+            This tutorial serves as a starting point for learning HTML. As you become more familiar with these basics, explore additional topics such as CSS for styling and JavaScript for interactivity.
+        </p>
+    </section>
+</body>
 </html>
