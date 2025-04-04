@@ -1,77 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Experience - Haider Ali</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
   <style>
-    /* Simple timeline styles */
+    /* Timeline Container */
     .timeline {
       position: relative;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 1rem 0;
-      max-width: 800px;
+      padding: 2rem 0;
     }
+
+    /* Vertical line down the middle */
     .timeline::after {
-      content: '';
+      content: "";
       position: absolute;
-      width: 4px;
+      width: 2px;
       background-color: #0056b3;
       top: 0;
       bottom: 0;
       left: 50%;
-      transform: translateX(-50%);
+      margin-left: -1px;
     }
-    .timeline-card {
+
+    /* Each timeline item container */
+    .timeline-item {
       position: relative;
-      width: 45%;
-      padding: 1rem;
-      background: #fff;
-      border: 1px solid #ddd;
-      margin: 1rem 0;
+      width: 50%;
+      padding: 1rem 2rem;
+      box-sizing: border-box;
     }
-    .timeline-card.left {
-      float: left;
-      clear: both;
-      transform: translateX(-10%);
+
+    /* Left timeline items */
+    .timeline-item.left {
+      left: 0;
+      text-align: right; /* Ensures text is aligned if desired */
     }
-    .timeline-card.right {
-      float: right;
-      clear: both;
-      transform: translateX(10%);
+
+    /* Right timeline items */
+    .timeline-item.right {
+      left: 50%;
     }
-    .timeline-card::before {
-      content: '';
+
+    /* Circle “dot” on the timeline */
+    .timeline-item::before {
+      content: "";
       position: absolute;
-      width: 16px;
-      height: 16px;
-      background: #0056b3;
+      width: 18px;
+      height: 18px;
       border-radius: 50%;
-      top: 1rem;
-      right: -8px;
+      background-color: #0056b3;
+      top: 1.5rem; /* Adjust to align with item’s heading */
       z-index: 1;
     }
-    .timeline-card.right::before {
-      left: -8px;
-      right: auto;
+
+    /* Dot positioning for left side */
+    .timeline-item.left::before {
+      right: -9px; /* halfway of width */
+    }
+
+    /* Dot positioning for right side */
+    .timeline-item.right::before {
+      left: -9px;
+    }
+
+    /* Card-like styling inside each timeline item */
+    .timeline-content {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 1rem;
+      position: relative;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .timeline-content h4 {
+      margin-top: 0;
+      font-weight: bold;
+      color: #0056b3;
+    }
+
+    /* Smaller screens: Make timeline single column */
+    @media screen and (max-width: 768px) {
+      .timeline::after {
+        left: 20px;
+      }
+      .timeline-item {
+        width: 100%;
+        padding-left: 3rem;
+        padding-right: 2rem;
+        margin-bottom: 2rem;
+        text-align: left !important;
+      }
+      .timeline-item.left,
+      .timeline-item.right {
+        left: 0;
+      }
+      .timeline-item::before {
+        left: 0;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Navigation -->
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="index.html">Haider Ali</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item active"><a class="nav-link" href="experience.html">Experience</a></li>
+          <li class="nav-item active">
+            <a class="nav-link" href="experience.html">Experience</a>
+          </li>
           <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
           <li class="nav-item"><a class="nav-link" href="certificates.html">Certificates</a></li>
@@ -81,33 +138,59 @@
     </div>
   </nav>
 
-  <!-- Timeline Content -->
+  <!-- Main Experience Section -->
   <section class="container py-5">
     <h2 class="text-center mb-5">Professional Experience</h2>
     <div class="timeline">
-      <!-- Current Roles -->
-      <div class="timeline-card left">
-        <h4>Lecturer at Yoobee Colleges</h4>
-        <p><strong>Feb 2025 - Present</strong></p>
-        <p>Teaching UX and C++ to aspiring professionals.</p>
+      <!-- Example: Left Item -->
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <h4>Lecturer at Yoobee Colleges</h4>
+          <p><strong>Feb 2025 - Present</strong></p>
+          <p>
+            Teaching UX and C++ to aspiring professionals. Guiding students
+            through hands-on projects and modern UX principles.
+          </p>
+        </div>
       </div>
-      <div class="timeline-card right">
-        <h4>Machine Learning Engineer at OneReg</h4>
-        <p><strong>2025 - Present (Contract)</strong></p>
-        <p>Developing RAG solutions for compliance using LangChain and local LLMs. Involved in data wrangling from PostgreSQL to creating a chat UI.</p>
+
+      <!-- Example: Right Item -->
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <h4>Machine Learning Engineer at OneReg</h4>
+          <p><strong>2025 - Present</strong></p>
+          <p>
+            Developing RAG solutions for compliance using LangChain and local
+            LLMs. Involved in data wrangling from PostgreSQL to creating a chat
+            UI.
+          </p>
+        </div>
       </div>
-      <!-- Previous Roles -->
-      <div class="timeline-card left">
-        <h4>Computer Vision Engineer at Beijing Uhai Technologies, Shanghai</h4>
-        <p><strong>April 2020 - October 2021</strong></p>
-        <p>Developed computer vision solutions and implemented object detection systems achieving high accuracy.</p>
+
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <h4>Computer Vision Engineer at Beijing Uhai Technologies, Shanghai</h4>
+          <p><strong>April 2020 - October 2021</strong></p>
+          <p>
+            Developed computer vision solutions, implemented object detection
+            systems achieving high accuracy, created image/video labeling tools.
+          </p>
+        </div>
       </div>
-      <div class="timeline-card right">
-        <h4>Machine Learning Engineer at Bio design Lab, Auckland</h4>
-        <p><strong>October 2021 - October 2024</strong></p>
-        <p>Worked on diverse ML projects including atrial fibrillation detection, stress detection, and advanced model development.</p>
+
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <h4>Machine Learning Engineer at Bio design Lab, Auckland</h4>
+          <p><strong>October 2021 - October 2024</strong></p>
+          <p>
+            Worked on EMG, ECG, point cloud data for advanced ML. Developed
+            models for atrial fibrillation detection (92.1% accuracy) and stress
+            detection (MAE: 0.2).
+          </p>
+        </div>
       </div>
-      <!-- Add additional timeline cards for internships, projects, etc. -->
+
+      <!-- Add more items as needed -->
     </div>
   </section>
 
@@ -116,7 +199,8 @@
     <p>&copy; 2025 Haider Ali. All Rights Reserved.</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/scripts.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  ></script>
 </body>
 </html>
