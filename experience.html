@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Experience - Haider Ali</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Simple timeline styles */
+    .timeline {
+      position: relative;
+      margin: 0 auto;
+      padding: 1rem 0;
+      max-width: 800px;
+    }
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background-color: #0056b3;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .timeline-card {
+      position: relative;
+      width: 45%;
+      padding: 1rem;
+      background: #fff;
+      border: 1px solid #ddd;
+      margin: 1rem 0;
+    }
+    .timeline-card.left {
+      float: left;
+      clear: both;
+      transform: translateX(-10%);
+    }
+    .timeline-card.right {
+      float: right;
+      clear: both;
+      transform: translateX(10%);
+    }
+    .timeline-card::before {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background: #0056b3;
+      border-radius: 50%;
+      top: 1rem;
+      right: -8px;
+      z-index: 1;
+    }
+    .timeline-card.right::before {
+      left: -8px;
+      right: auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Haider Ali</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item active"><a class="nav-link" href="experience.html">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="certificates.html">Certificates</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Timeline Content -->
+  <section class="container py-5">
+    <h2 class="text-center mb-5">Professional Experience</h2>
+    <div class="timeline">
+      <!-- Current Roles -->
+      <div class="timeline-card left">
+        <h4>Lecturer at Yoobee Colleges</h4>
+        <p><strong>Feb 2025 - Present</strong></p>
+        <p>Teaching UX and C++ to aspiring professionals.</p>
+      </div>
+      <div class="timeline-card right">
+        <h4>Machine Learning Engineer at OneReg</h4>
+        <p><strong>2025 - Present (Contract)</strong></p>
+        <p>Developing RAG solutions for compliance using LangChain and local LLMs. Involved in data wrangling from PostgreSQL to creating a chat UI.</p>
+      </div>
+      <!-- Previous Roles -->
+      <div class="timeline-card left">
+        <h4>Computer Vision Engineer at Beijing Uhai Technologies, Shanghai</h4>
+        <p><strong>April 2020 - October 2021</strong></p>
+        <p>Developed computer vision solutions and implemented object detection systems achieving high accuracy.</p>
+      </div>
+      <div class="timeline-card right">
+        <h4>Machine Learning Engineer at Bio design Lab, Auckland</h4>
+        <p><strong>October 2021 - October 2024</strong></p>
+        <p>Worked on diverse ML projects including atrial fibrillation detection, stress detection, and advanced model development.</p>
+      </div>
+      <!-- Add additional timeline cards for internships, projects, etc. -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-3 text-center">
+    <p>&copy; 2025 Haider Ali. All Rights Reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
