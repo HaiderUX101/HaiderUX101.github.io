@@ -2,88 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="Haider">
-    <style>
-       ul.nav{
-                padding-left: 0px;
-                background-color: brown;
-                text-align: center;
-            }
-            ul.nav>li{
-                display: inline-block;
-                padding: 10px 20px;
-            }
-            ul.nav>li:hover{
-                background-color: blue;
-            }
-           
-    </style>
-    <title>HTML Tutorial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haider Ali - Interactive CV</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-    <!-- HTML Tutorial Section -->
-    <section id="html-tutorial">
-        <ul class="nav">
-           
-            <li> <a href="https://haiderux101.github.io/new_page.html">Home</a></li>
-            <li>About</li>
-            <li>Contact</li>
-        </ul>
-        <h1>Introduction to HTML</h1>
-        <p>
-            HTML stands for <strong>Hyper Text Markup Language</strong> and is the backbone of most websites. 
-            It provides the structure of a webpage by using a series of elements and tags.
-        </p>
-        
-        <h2>Basic Structure of an HTML Document</h2>
-        <p>
-            Every HTML document begins with the <code>&lt;!DOCTYPE html&gt;</code> declaration, which tells the browser to render the page using HTML5. 
-            The rest of the document is divided into two main parts:
-        </p>
-        <ul>
-            <li><strong>Head Section</strong>: Contains meta-information, the title, links to CSS files, scripts, etc.</li>
-            <li><strong>Body Section</strong>: Contains the actual content of the webpage that users see.</li>
-        </ul>
-        
-        <h2>Common HTML Elements</h2>
-        <ul>
-            <li><code>&lt;html&gt;</code>: The root element that encloses the entire HTML document.</li>
-            <li><code>&lt;head&gt;</code>: Contains metadata and links to resources.</li>
-            <li><code>&lt;title&gt;</code>: Specifies the title of the document, which appears in the browser tab.</li>
-            <li><code>&lt;body&gt;</code>: Contains all the content that is displayed to the user.</li>
-            <li><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>: Define headings, with <code>&lt;h1&gt;</code> being the most important.</li>
-            <li><code>&lt;p&gt;</code>: Defines a paragraph of text.</li>
-            <li><code>&lt;a&gt;</code>: Creates hyperlinks to other pages or resources.</li>
-            <li><code>&lt;img&gt;</code>: Embeds images into the page. Remember to use the <code>alt</code> attribute to provide alternative text.</li>
-        </ul>
-        
-        <h2>Example of a Simple HTML Page</h2>
-        <pre>
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;My First HTML Page&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Welcome to HTML!&lt;/h1&gt;
-    &lt;p&gt;This is a simple paragraph to demonstrate basic HTML elements.&lt;/p&gt;
-    &lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-        </pre>
-        
-        <h2>Best Practices</h2>
-        <ul>
-            <li>Always declare the document type at the beginning.</li>
-            <li>Ensure that your HTML is well-formed with proper opening and closing tags.</li>
-            <li>Use semantic elements (like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>) to improve accessibility and SEO.</li>
-            <li>Include the <code>alt</code> attribute in images to aid users who rely on screen readers.</li>
-        </ul>
-        
-        <p>
-            This tutorial serves as a starting point for learning HTML. As you become more familiar with these basics, explore additional topics such as CSS for styling and JavaScript for interactivity.
-        </p>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Haider Ali</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="certificates.html">Certificates</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container py-5 text-center">
+        <h1 class="display-4">Hello, I'm Haider Ali</h1>
+        <p class="lead">Machine Learning Engineer | Lecturer | Researcher</p>
+        <a href="about.html" class="btn btn-primary mt-3">Learn More About Me</a>
     </section>
+
+    <footer class="bg-dark text-light py-3 text-center">
+        <p>&copy; 2025 Haider Ali. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
