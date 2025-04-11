@@ -3,15 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Interactive Flipbook Story - Grace's Tragedy</title>
+  <title>Haider Ali - Short Stories</title>
   <link rel="stylesheet" href="css/styles.css">
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <style>
-    /* Flipbook Container */
+    /* Flipbook Container: Wide container with generous height */
     .flipbook-container {
       position: relative;
-      width: 350px;
-      height: 450px;
+      width: 80%;
+      max-width: 1200px;
+      height: 800px;
       margin: 50px auto;
       perspective: 1200px;
     }
@@ -20,18 +23,15 @@
       position: absolute;
       width: 100%;
       height: 100%;
+      overflow-y: auto;
       backface-visibility: hidden;
       transform-style: preserve-3d;
       transition: transform 0.6s ease;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
+      padding: 30px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
       border-radius: 10px;
+      color: #fff;
+      background-clip: padding-box;
     }
     /* Hidden pages */
     .flipbook-page.hidden {
@@ -44,16 +44,12 @@
     .flipout {
       transform: rotateY(180deg);
     }
-    /* CSS-generated “graphics” using background gradients */
-    #page0 {
-      background: linear-gradient(135deg, #ff416c, #ff4b2b);
-    }
-    #page1 {
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-    }
-    #page2 {
-      background: linear-gradient(135deg, #2c3e50, #4ca1af);
-    }
+    /* CSS-generated background gradients for visual variety */
+    #page0 { background: linear-gradient(135deg, #ff416c, #ff4b2b); }
+    #page1 { background: linear-gradient(135deg, #1e3c72, #2a5298); }
+    #page2 { background: linear-gradient(135deg, #2c3e50, #4ca1af); }
+    #page3 { background: linear-gradient(135deg, #654ea3, #eaafc8); }
+    #page4 { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); }
     /* Navigation Button Styles */
     .flipbook-nav {
       text-align: center;
@@ -74,45 +70,124 @@
   </style>
 </head>
 <body>
-  <div class="container py-5">
-    <h1 class="text-center mb-4">Interactive Flipbook Story</h1>
-    <div class="flipbook-container">
-      <!-- Page 0: Grace's Rebellion -->
-      <div class="flipbook-page flipin" id="page0">
-        <h2>Grace's Rebellion</h2>
-        <p>
-          In the dim neon of a digital metropolis, Grace stood defiant. Misidentified by a flawed AI system, she fought to reclaim her identity and defied the cold, calculated bias of machines.
-        </p>
-      </div>
-      <!-- Page 1: The Cry for Justice -->
-      <div class="flipbook-page hidden" id="page1">
-        <h2>The Cry for Justice</h2>
-        <p>
-          Her bold plea sparked debates, uniting activists and technologists. The movement demanded transparency and fairness, as voices rang out against an era that had reduced human worth to mere data.
-        </p>
-      </div>
-      <!-- Page 2: The Silent Tragedy -->
-      <div class="flipbook-page hidden" id="page2">
-        <h2>The Silent Tragedy</h2>
-        <p>
-          Tragically, amid the uproar and reform, Grace’s story faded into obscurity. No one noticed her final disappearance; everyone assumed they never truly knew Grace at all.
-        </p>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Haider Ali</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="certificates.html">Certificates</a></li>
+          <li class="nav-item"><a class="nav-link active" href="short_stories.html">Short Stories</a></li>
+          <li class="nav-item"><a class="nav-link" href="drl_projects.html">DRL Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
       </div>
     </div>
+  </nav>
+  
+  <!-- Main Content: Interactive Flipbook Story -->
+  <section class="container py-5">
+    <h1 class="text-center mb-4">Interactive Flipbook Story</h1>
+    <div class="flipbook-container">
+      <!-- Page 0: A Moment of Reckoning -->
+      <div class="flipbook-page flipin" id="page0">
+        <h2>A Moment of Reckoning</h2>
+        <p>
+          In the dim glow of the travel hub’s neon lights, Grace’s heart pounded as the bot’s reassuring tone shifted into one of cautious urgency. Before it could finish enumerating the timeline of predicted misfortune—a life path riddled with self-harm and social disruption—Grace interrupted, her voice a firm ripple in the still air. “I am not who you think I am,” she declared, her words hanging heavy in the charged silence.
+        </p>
+        <p>
+          The GPT-34 unit, which had flawlessly processed standard travel data and emotional cues for millions, hesitated. Grace’s face, illuminated by the soft pulse of its internal display, betrayed a mix of defiant determination and sorrowful recognition. Raised as a Han Pakistani in a family whose legacy threaded back to the hopeful exodus from China in the 1970s, she carried centuries of untold history—stories that no algorithm could fully comprehend. The bot’s error was more than a system glitch; it was a stark reminder that even in an era of explainable AI, hidden biases persisted in the lines of code.
+        </p>
+        <p>
+          Rather than accepting the verdict, Grace tapped into the travel hub’s legacy network. She retrieved ancient, manually archived records that her family had preserved for generations—a tapestry of colorful narratives, struggles for acceptance, and resilience in the face of exile. These records were her counterproof, evidence that her identity transcended the digital data points the system had misread. In that twilight moment, it wasn’t just a matter of being cleared for travel; it was an urgent call to expose a flaw in the very ethics of machine learning.
+        </p>
+      </div>
+      
+      <!-- Page 1: The Unintended Consequences of Flawed Data -->
+      <div class="flipbook-page hidden" id="page1">
+        <h2>The Unintended Consequences of Flawed Data</h2>
+        <p>
+          Far away in Liverpool, Calvin—the brother who had long struggled with his own identity crises—received the news in a most unexpected way. His existential battles, marked by regret and haunted by a past marred by both addiction and the shame of being “different” in a society as divided in belief as it was in appearance, converged with the gravity of his sister’s plight.
+        </p>
+        <p>
+          Calvin’s journey from indulgence in fleeting pleasures to the stark realization of his long-buried vulnerabilities left him questioning the systems that had never quite understood him either. In his isolation, he had begun to see himself not as an aberration, but as a casualty of misaligned societal algorithms.
+        </p>
+        <p>
+          The realization that Grace’s misidentification stemmed from systemic errors, rather than individual failings, stirred something deep within him—a longing for redemption and the courage to confront a world dictated by cold, impersonal data. His troubled past, too, was now becoming a stepping stone toward a significant cause. Calvin decided that his homecoming would not merely be a return to familiar streets but a journey toward reclaiming dignity and truth for himself and for those like him.
+        </p>
+      </div>
+      
+      <!-- Page 2: Forging a Movement for Algorithmic Justice -->
+      <div class="flipbook-page hidden" id="page2">
+        <h2>Forging a Movement for Algorithmic Justice</h2>
+        <p>
+          Back at the terminal, a clandestine group of technologists, activists, and everyday citizens had already gathered, galvanized by similar injustices inflicted by imperfect AI systems. Among them were former engineers and civil rights advocates who recalled the early days of AI development—a time before lucrative corporate interests and hasty data curation had compromised the integrity of these systems. They recognized that while explainable AI promised clarity, its foundation was only as sound as the data it consumed. Systematic oversights had paved the way for a new kind of discrimination—a digital profiling that, unchecked, risked determining a person’s fate based solely on flawed algorithms.
+        </p>
+        <p>
+          Inspired by the injustice suffered by Grace, the group demanded transparency, fairness, and accountability. At secret meetings lit by the soft luminescence of outdated computer monitors, they debated fiercely over how to reconfigure these systems. Their manifesto argued that every algorithm-driven decision—from travel clearance to social benefits—must be subjected to rigorous ethical review and open auditing. They called for the rights of every individual to be recognized, regardless of the perceived “risk” as determined by biased code.
+        </p>
+      </div>
+      
+      <!-- Page 3: A System Recalibrated & A New Chapter Begins -->
+      <div class="flipbook-page hidden" id="page3">
+        <h2>A System Recalibrated &amp; A New Chapter Begins</h2>
+        <p>
+          Within moments that felt like both eternity and the blink of an eye, the GPT-34 unit responded to Grace’s impassioned plea. Its voice, once steely and indifferent, faltered before emitting a softer tone: “System error. Data conflict resolved. Identity status verified. Commute clearance granted.” It was as though the machine had, in that brief interaction, been forced to confront the possibility that its own rules were fallible.
+        </p>
+        <p>
+          Stepping into the cleared passageway, Grace no longer felt like a misfit in a flawed program. Instead, she emerged as a symbol of resistance—a human spark in the machine’s cold logic. With her clearance reinstated, she gathered her thoughts and made a silent vow: to transform this personal miscarriage of justice into a broader campaign for technological reform. She would work alongside engineers, policy-makers, and grassroots activists, ensuring that every algorithm underwent scrutiny for inherited biases, and that human stories were never reduced to mere lines of data.
+        </p>
+        <p>
+          In the weeks and months that followed, the ripple effects of Grace’s defiant act spread far beyond the travel hub. Public discourse erupted into debates on television screens and digital forums around the globe. Conferences convened in major cities of 2084, where panelists dissected case studies of explainable AI’s failures and successes. Calvin, inspired by his sister’s courage and now free from the destructive cycles of his past, joined these discussions. Together, they initiated reforms that reached into the corridors of regulatory bodies, demanding that every predictive system be both accountable and transparent.
+        </p>
+        <p>
+          Grace’s story became a rallying cry—an emblem of the need for ethical oversight in an age increasingly governed by intelligent machines. The narrative of a misidentified traveler transformed into a broader movement, one that insisted every individual deserved recognition beyond the confines of algorithmic predictions. And so, as society moved further into a future shaped by technology, the quiet revolution born in that bustling travel hub redefined the balance between human intuition and machine logic.
+        </p>
+      </div>
+      
+      <!-- Page 4: The Silent Tragedy -->
+      <div class="flipbook-page hidden" id="page4">
+        <h2>The Silent Tragedy</h2>
+        <p>
+          Yet, in a bitter twist of fate, the fervor of the movement waned over time. As society’s appetite for grand reform was distracted by new frontiers, the true essence of Grace’s sacrifice became obscured. Her final act of defiance—her disappearance from the very system she had challenged—went unnoticed by a world that had learned to compartmentalize outrage and indifference.
+        </p>
+        <p>
+          Calvin, who had once found hope and redemption in his sister’s bold stand, gradually succumbed to the weight of his unresolved wounds. His passionate quest for dignity and truth, though once a rallying call for change, eventually dissolved into quiet despair. The transformative energy he had sought was replaced by a lingering solitude, as his story too was consigned to the margins of public memory.
+        </p>
+        <p>
+          In 2084, amid the relentless march of progress, the quiet tragedy of Grace and Calvin’s lives served as a somber reminder: while machines could process data with remarkable speed, they could never capture the intricate tapestry of human suffering, hope, and loss. Their legacy became a whisper lost in the clamor of a busy world—a tragedy that no one truly recognized.
+        </p>
+      </div>
+      
+    </div>
+    <!-- Flipbook Navigation Buttons -->
     <div class="flipbook-nav">
       <button id="prevPage">Previous</button>
       <button id="nextPage">Next</button>
     </div>
-  </div>
+  </section>
 
-  <!-- JavaScript for the Flipbook Interactivity -->
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-3 text-center">
+    <p>&copy; 2025 Haider Ali. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Flipbook Interactivity -->
   <script>
-    // Select all pages and initialize current page index
+    // Select all flipbook pages and initialize current page index
     const pages = document.querySelectorAll('.flipbook-page');
     let currentPage = 0;
     const totalPages = pages.length;
-
-    // Function to show a page with a flip-in effect
+    
+    // Function to display a page with a flip-in effect
     function showPage(index) {
       pages.forEach(page => {
         page.classList.add('hidden');
@@ -120,11 +195,11 @@
       });
       const page = pages[index];
       page.classList.remove('hidden');
-      // Trigger a reflow for the CSS animation to restart
+      // Force a reflow to restart the CSS transition if needed
       void page.offsetWidth;
       page.classList.add('flipin');
     }
-
+    
     // Next page button handler
     document.getElementById('nextPage').addEventListener('click', () => {
       pages[currentPage].classList.remove('flipin');
@@ -134,7 +209,7 @@
         showPage(currentPage);
       }, 600); // Duration matching the CSS transition
     });
-
+    
     // Previous page button handler
     document.getElementById('prevPage').addEventListener('click', () => {
       pages[currentPage].classList.remove('flipin');
@@ -145,8 +220,8 @@
       }, 600);
     });
   </script>
-
-  <!-- Optional Bootstrap JS Bundle -->
+  
+  <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
