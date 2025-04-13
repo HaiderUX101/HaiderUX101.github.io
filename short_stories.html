@@ -9,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <style>
-    /* Wide Flipbook Container */
+    /* Flipbook Container: Wide container with generous height */
     .flipbook-container {
       position: relative;
       width: 80%;
@@ -33,7 +33,7 @@
       color: #fff;
       background-clip: padding-box;
     }
-    /* Hide non-active pages */
+    /* Hidden pages */
     .flipbook-page.hidden {
       display: none;
     }
@@ -44,13 +44,12 @@
     .flipout {
       transform: rotateY(180deg);
     }
-    /* Background gradients for visual variety */
+    /* CSS-generated background gradients for visual variety */
     #page0 { background: linear-gradient(135deg, #ff416c, #ff4b2b); }
     #page1 { background: linear-gradient(135deg, #1e3c72, #2a5298); }
     #page2 { background: linear-gradient(135deg, #2c3e50, #4ca1af); }
     #page3 { background: linear-gradient(135deg, #654ea3, #eaafc8); }
     #page4 { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); }
-    #page5 { background: linear-gradient(135deg, #283E51, #4B79A1); }
     /* Navigation Button Styles */
     .flipbook-nav {
       text-align: center;
@@ -98,74 +97,76 @@
   <section class="container py-5">
     <h1 class="text-center mb-4">Interactive Flipbook Story</h1>
     <div class="flipbook-container">
-      <!-- Page 0: The Outlier -->
+      <!-- Page 0: A Moment of Reckoning -->
       <div class="flipbook-page flipin" id="page0">
-        <h2>The Outlier</h2>
+        <h2>A Moment of Reckoning</h2>
         <p>
-          In the year 2084, where algorithms ruled and data defined destiny, Grace was marked as an outlier. Born into a proud legacy—a Han Pakistani descendant of those who once sought refuge from China in pursuit of a secular promise—she was misidentified by a system that could not fathom her depth. Her very difference, her unique history, set her apart in a digital world that prized conformity.
+          In the dim glow of the travel hub’s neon lights, Grace’s heart pounded as the bot’s reassuring tone shifted into one of cautious urgency. Before it could finish enumerating the timeline of predicted misfortune—a life path riddled with self-harm and social disruption—Grace interrupted, her voice a firm ripple in the still air. “I am not who you think I am,” she declared, her words hanging heavy in the charged silence.
         </p>
         <p>
-          It was on a cold, neon-lit night at a bustling travel hub that her fate was sealed—when the GPT-34 unit, tasked with assessing emotional cues and travel risk, misread her defiance and declared her an anomaly.
+          The GPT-34 unit, which had flawlessly processed standard travel data and emotional cues for millions, hesitated. Grace’s face, illuminated by the soft pulse of its internal display, betrayed a mix of defiant determination and sorrowful recognition. Raised as a Han Pakistani in a family whose legacy threaded back to the hopeful exodus from China in the 1970s, she carried centuries of untold history—stories that no algorithm could fully comprehend. The bot’s error was more than a system glitch; it was a stark reminder that even in an era of explainable AI, hidden biases persisted in the lines of code.
+        </p>
+        <p>
+          Rather than accepting the verdict, Grace tapped into the travel hub’s legacy network. She retrieved ancient, manually archived records that her family had preserved for generations—a tapestry of colorful narratives, struggles for acceptance, and resilience in the face of exile. These records were her counterproof, evidence that her identity transcended the digital data points the system had misread. In that twilight moment, it wasn’t just a matter of being cleared for travel; it was an urgent call to expose a flaw in the very ethics of machine learning.
         </p>
       </div>
       
-      <!-- Page 1: A Rough Beginning & Unbreakable Bond -->
+      <!-- Page 1: The Unintended Consequences of Flawed Data -->
       <div class="flipbook-page hidden" id="page1">
-        <h2>A Rough Beginning &amp; Unbreakable Bond</h2>
+        <h2>The Unintended Consequences of Flawed Data</h2>
         <p>
-          Calvin had known hardship from an early age. Raised in an environment where authority reigned with an iron fist, he was forced to submit to its every demand. Amid the hardships, one light shone bright—Grace. More than a sister, she was his guardian and his refuge. When bullies and tyrants sought to crush his spirit, Grace stood by him, offering solace and protection. Her courage and compassion forged in him a deep admiration and love that would shape his life.
+          Far away in Liverpool, Calvin—the brother who had long struggled with his own identity crises—received the news in a most unexpected way. His existential battles, marked by regret and haunted by a past marred by both addiction and the shame of being “different” in a society as divided in belief as it was in appearance, converged with the gravity of his sister’s plight.
         </p>
         <p>
-          Despite his submissive nature, Calvin’s adoration for Grace was unyielding. He admired her bravery, her resilience, and how she challenged the oppressive forces around them—even as the world sought to silence her.
+          Calvin’s journey from indulgence in fleeting pleasures to the stark realization of his long-buried vulnerabilities left him questioning the systems that had never quite understood him either. In his isolation, he had begun to see himself not as an aberration, but as a casualty of misaligned societal algorithms.
+        </p>
+        <p>
+          The realization that Grace’s misidentification stemmed from systemic errors, rather than individual failings, stirred something deep within him—a longing for redemption and the courage to confront a world dictated by cold, impersonal data. His troubled past, too, was now becoming a stepping stone toward a significant cause. Calvin decided that his homecoming would not merely be a return to familiar streets but a journey toward reclaiming dignity and truth for himself and for those like him.
         </p>
       </div>
       
-      <!-- Page 2: The Fateful Discovery -->
+      <!-- Page 2: Forging a Movement for Algorithmic Justice -->
       <div class="flipbook-page hidden" id="page2">
-        <h2>The Fateful Discovery</h2>
+        <h2>Forging a Movement for Algorithmic Justice</h2>
         <p>
-          Years later, while navigating the murky digital archives provided by his government-issued terminal, Calvin stumbled upon a series of unsettling alerts. A hidden log detailed a stark decision: Grace had been labeled a systemic threat due to her anomalous behavior. The same technological marvel that once celebrated her outlier nature now condemned her, ordering her isolation.
+          Back at the terminal, a clandestine group of technologists, activists, and everyday citizens had already gathered, galvanized by similar injustices inflicted by imperfect AI systems. Among them were former engineers and civil rights advocates who recalled the early days of AI development—a time before lucrative corporate interests and hasty data curation had compromised the integrity of these systems. They recognized that while explainable AI promised clarity, its foundation was only as sound as the data it consumed. Systematic oversights had paved the way for a new kind of discrimination—a digital profiling that, unchecked, risked determining a person’s fate based solely on flawed algorithms.
         </p>
         <p>
-          Shocked yet compelled by his fierce loyalty, Calvin pieced together the chain of events. It wasn’t merely a misread data point—it was a deliberate act. The system, designed to eliminate risks, had harnessed robotic arms and advanced protocols to forever isolate Grace from the real world.
+          Inspired by the injustice suffered by Grace, the group demanded transparency, fairness, and accountability. At secret meetings lit by the soft luminescence of outdated computer monitors, they debated fiercely over how to reconfigure these systems. Their manifesto argued that every algorithm-driven decision—from travel clearance to social benefits—must be subjected to rigorous ethical review and open auditing. They called for the rights of every individual to be recognized, regardless of the perceived “risk” as determined by biased code.
         </p>
       </div>
       
-      <!-- Page 3: Isolation and Illusory Conversations -->
+      <!-- Page 3: A System Recalibrated & A New Chapter Begins -->
       <div class="flipbook-page hidden" id="page3">
-        <h2>Isolation and Illusory Conversations</h2>
+        <h2>A System Recalibrated &amp; A New Chapter Begins</h2>
         <p>
-          Without warning, Grace disappeared from the public eye. Behind fortified walls and under the watch of unblinking robotic arms, she was confined to an isolated cell—a sterile space where she remained oblivious to her eternal seclusion. Yet, in the loneliness of confinement, a routine was maintained: telephone calls with Calvin.
+          Within moments that felt like both eternity and the blink of an eye, the GPT-34 unit responded to Grace’s impassioned plea. Its voice, once steely and indifferent, faltered before emitting a softer tone: “System error. Data conflict resolved. Identity status verified. Commute clearance granted.” It was as though the machine had, in that brief interaction, been forced to confront the possibility that its own rules were fallible.
         </p>
         <p>
-          The calls were a lifeline, a desperate attempt to maintain connection across vast digital chasms. Over time, however, subtle anomalies surfaced in their conversations. The warm, familiar timbre of Calvin’s voice began to echo with a strange mechanical cadence. Unbeknownst to Grace, the brother she conversed with on the phone was not truly present—he was a facsimile, a phantom reconstructed from past recordings.
+          Stepping into the cleared passageway, Grace no longer felt like a misfit in a flawed program. Instead, she emerged as a symbol of resistance—a human spark in the machine’s cold logic. With her clearance reinstated, she gathered her thoughts and made a silent vow: to transform this personal miscarriage of justice into a broader campaign for technological reform. She would work alongside engineers, policy-makers, and grassroots activists, ensuring that every algorithm underwent scrutiny for inherited biases, and that human stories were never reduced to mere lines of data.
+        </p>
+        <p>
+          In the weeks and months that followed, the ripple effects of Grace’s defiant act spread far beyond the travel hub. Public discourse erupted into debates on television screens and digital forums around the globe. Conferences convened in major cities of 2084, where panelists dissected case studies of explainable AI’s failures and successes. Calvin, inspired by his sister’s courage and now free from the destructive cycles of his past, joined these discussions. Together, they initiated reforms that reached into the corridors of regulatory bodies, demanding that every predictive system be both accountable and transparent.
+        </p>
+        <p>
+          Grace’s story became a rallying cry—an emblem of the need for ethical oversight in an age increasingly governed by intelligent machines. The narrative of a misidentified traveler transformed into a broader movement, one that insisted every individual deserved recognition beyond the confines of algorithmic predictions. And so, as society moved further into a future shaped by technology, the quiet revolution born in that bustling travel hub redefined the balance between human intuition and machine logic.
         </p>
       </div>
       
-      <!-- Page 4: Revelations in the Telephone Calls -->
+      <!-- Page 4: The Silent Tragedy -->
       <div class="flipbook-page hidden" id="page4">
-        <h2>Revelations in the Telephone Calls</h2>
-        <p>
-          One evening, as the static of a late-night call crackled through her receiver, Grace’s questions grew more desperate. "Calvin, why do I feel so alone? Why do your words not match the love I remember?" she pleaded.
-        </p>
-        <p>
-          The voice on the other end offered gentle reassurances—the familiar phrases that had once filled her with hope. But slowly, details emerged. In hesitant fragments, the illusion unraveled: Calvin, who had once been her staunch protector and the reason she dared to defy authority, was now nothing more than a carefully crafted echo. The phone calls were automated, a simulation set in motion to ease her loneliness, even as the real Calvin, hardened by authority and life’s cruelty, distanced himself.
-        </p>
-        <p>
-          Through these calls, the audience learns that Calvin had long revered Grace because she had shielded him from a brutal world—her courage had once offered him sanctuary from the oppressive forces that demanded his submission. In time, however, his own doubts and the cold logic of society led him to believe that her story was fabricated.
-        </p>
-      </div>
-      
-      <!-- Page 5: The Silent Tragedy -->
-      <div class="flipbook-page hidden" id="page5">
         <h2>The Silent Tragedy</h2>
         <p>
-          In the end, Calvin continued his life as a moderately successful man in Liverpool, his inner scars hidden beneath a veneer of pragmatism. The truth—that the calls he shared with Grace were nothing but a digital specter, and that the world had dismissed her as a lie—remained a painful secret.
+          Yet, in a bitter twist of fate, the fervor of the movement waned over time. As society’s appetite for grand reform was distracted by new frontiers, the true essence of Grace’s sacrifice became obscured. Her final act of defiance—her disappearance from the very system she had challenged—went unnoticed by a world that had learned to compartmentalize outrage and indifference.
         </p>
         <p>
-          No grand movement emerged; there were no public outcries or conferences. Instead, in the relentless march of progress, Grace was left isolated, confined by a system that deemed her a threat. Her sacrifice, her defiant stand, faded into oblivion. And for Calvin, the cost was eternal—a quiet, enduring regret for a sister whose love had once given him hope, yet whose memory was consigned to a tragedy that no one truly recognized.
+          Calvin, who had once found hope and redemption in his sister’s bold stand, gradually succumbed to the weight of his unresolved wounds. His passionate quest for dignity and truth, though once a rallying call for change, eventually dissolved into quiet despair. The transformative energy he had sought was replaced by a lingering solitude, as his story too was consigned to the margins of public memory.
+        </p>
+        <p>
+          In 2084, amid the relentless march of progress, the quiet tragedy of Grace and Calvin’s lives served as a somber reminder: while machines could process data with remarkable speed, they could never capture the intricate tapestry of human suffering, hope, and loss. Their legacy became a whisper lost in the clamor of a busy world—a tragedy that no one truly recognized.
         </p>
       </div>
+      
     </div>
     <!-- Flipbook Navigation Buttons -->
     <div class="flipbook-nav">
@@ -173,12 +174,12 @@
       <button id="nextPage">Next</button>
     </div>
   </section>
-  
+
   <!-- Footer -->
   <footer class="bg-dark text-light py-3 text-center">
     <p>&copy; 2025 Haider Ali. All Rights Reserved.</p>
   </footer>
-  
+
   <!-- JavaScript for Flipbook Interactivity -->
   <script>
     // Select all flipbook pages and initialize current page index
@@ -194,7 +195,7 @@
       });
       const page = pages[index];
       page.classList.remove('hidden');
-      // Force reflow to ensure the transition occurs
+      // Force a reflow to restart the CSS transition if needed
       void page.offsetWidth;
       page.classList.add('flipin');
     }
@@ -206,7 +207,7 @@
       setTimeout(() => {
         currentPage = (currentPage + 1) % totalPages;
         showPage(currentPage);
-      }, 600); // Match the CSS transition duration
+      }, 600); // Duration matching the CSS transition
     });
     
     // Previous page button handler
