@@ -1,227 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Haider Ali - Short Stories</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2084 - Grace and Calvin's Story</title>
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  />
+  <script
+    src="https://kit.fontawesome.com/a076d05399.js"
+    crossorigin="anonymous"
+  ></script>
   <style>
-    /* Flipbook Container: Wide container with generous height */
-    .flipbook-container {
-      position: relative;
-      width: 80%;
-      max-width: 1200px;
-      height: 800px;
-      margin: 50px auto;
-      perspective: 1200px;
+    body {
+      font-family: Georgia, serif;
+      line-height: 1.7;
+      background-color: #f7f7f7;
+      color: #333;
+      margin: 0;
+      padding-bottom: 60px; /* extra space so content isn't hidden under footer */
     }
-    /* Base styles for each flipbook page */
-    .flipbook-page {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      overflow-y: auto;
-      backface-visibility: hidden;
-      transform-style: preserve-3d;
-      transition: transform 0.6s ease;
-      padding: 30px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      border-radius: 10px;
-      color: #fff;
-      background-clip: padding-box;
+    nav.navbar {
+      margin-bottom: 20px;
     }
-    /* Hidden pages */
-    .flipbook-page.hidden {
-      display: none;
-    }
-    /* Flip animations */
-    .flipin {
-      transform: rotateY(0deg);
-    }
-    .flipout {
-      transform: rotateY(180deg);
-    }
-    /* CSS-generated background gradients for visual variety */
-    #page0 { background: linear-gradient(135deg, #ff416c, #ff4b2b); }
-    #page1 { background: linear-gradient(135deg, #1e3c72, #2a5298); }
-    #page2 { background: linear-gradient(135deg, #2c3e50, #4ca1af); }
-    #page3 { background: linear-gradient(135deg, #654ea3, #eaafc8); }
-    #page4 { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); }
-    /* Navigation Button Styles */
-    .flipbook-nav {
+    h1 {
+      margin-top: 40px;
+      margin-bottom: 30px;
+      font-weight: 600;
       text-align: center;
-      margin-top: 20px;
     }
-    .flipbook-nav button {
-      background-color: #0056b3;
-      border: none;
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    p {
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
+    footer {
+      background: #222;
       color: #fff;
-      padding: 10px 15px;
-      margin: 0 10px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .flipbook-nav button:hover {
-      background-color: #003b7a;
+      text-align: center;
+      padding: 15px 0;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0;
     }
   </style>
 </head>
 <body>
   <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
+    <div class="container-fluid">
       <a class="navbar-brand" href="index.html">Haider Ali</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="experience.html">Experience</a>
+          </li>
           <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
-          <li class="nav-item"><a class="nav-link" href="certificates.html">Certificates</a></li>
-          <li class="nav-item"><a class="nav-link active" href="short_stories.html">Short Stories</a></li>
-          <li class="nav-item"><a class="nav-link" href="drl_projects.html">DRL Projects</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="publications.html">Publications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="certificates.html">Certificates</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="short_stories.html">Short Stories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="drl_projects.html">DRL Projects</a>
+          </li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
-  
-  <!-- Main Content: Interactive Flipbook Story -->
-  <section class="container py-5">
-    <h1 class="text-center mb-4">Interactive Flipbook Story</h1>
-    <div class="flipbook-container">
-      <!-- Page 0: A Moment of Reckoning -->
-      <div class="flipbook-page flipin" id="page0">
-        <h2>A Moment of Reckoning</h2>
-        <p>
-          In the dim glow of the travel hub’s neon lights, Grace’s heart pounded as the bot’s reassuring tone shifted into one of cautious urgency. Before it could finish enumerating the timeline of predicted misfortune—a life path riddled with self-harm and social disruption—Grace interrupted, her voice a firm ripple in the still air. “I am not who you think I am,” she declared, her words hanging heavy in the charged silence.
-        </p>
-        <p>
-          The GPT-34 unit, which had flawlessly processed standard travel data and emotional cues for millions, hesitated. Grace’s face, illuminated by the soft pulse of its internal display, betrayed a mix of defiant determination and sorrowful recognition. Raised as a Han Pakistani in a family whose legacy threaded back to the hopeful exodus from China in the 1970s, she carried centuries of untold history—stories that no algorithm could fully comprehend. The bot’s error was more than a system glitch; it was a stark reminder that even in an era of explainable AI, hidden biases persisted in the lines of code.
-        </p>
-        <p>
-          Rather than accepting the verdict, Grace tapped into the travel hub’s legacy network. She retrieved ancient, manually archived records that her family had preserved for generations—a tapestry of colorful narratives, struggles for acceptance, and resilience in the face of exile. These records were her counterproof, evidence that her identity transcended the digital data points the system had misread. In that twilight moment, it wasn’t just a matter of being cleared for travel; it was an urgent call to expose a flaw in the very ethics of machine learning.
-        </p>
-      </div>
-      
-      <!-- Page 1: The Unintended Consequences of Flawed Data -->
-      <div class="flipbook-page hidden" id="page1">
-        <h2>The Unintended Consequences of Flawed Data</h2>
-        <p>
-          Far away in Liverpool, Calvin—the brother who had long struggled with his own identity crises—received the news in a most unexpected way. His existential battles, marked by regret and haunted by a past marred by both addiction and the shame of being “different” in a society as divided in belief as it was in appearance, converged with the gravity of his sister’s plight.
-        </p>
-        <p>
-          Calvin’s journey from indulgence in fleeting pleasures to the stark realization of his long-buried vulnerabilities left him questioning the systems that had never quite understood him either. In his isolation, he had begun to see himself not as an aberration, but as a casualty of misaligned societal algorithms.
-        </p>
-        <p>
-          The realization that Grace’s misidentification stemmed from systemic errors, rather than individual failings, stirred something deep within him—a longing for redemption and the courage to confront a world dictated by cold, impersonal data. His troubled past, too, was now becoming a stepping stone toward a significant cause. Calvin decided that his homecoming would not merely be a return to familiar streets but a journey toward reclaiming dignity and truth for himself and for those like him.
-        </p>
-      </div>
-      
-      <!-- Page 2: Forging a Movement for Algorithmic Justice -->
-      <div class="flipbook-page hidden" id="page2">
-        <h2>Forging a Movement for Algorithmic Justice</h2>
-        <p>
-          Back at the terminal, a clandestine group of technologists, activists, and everyday citizens had already gathered, galvanized by similar injustices inflicted by imperfect AI systems. Among them were former engineers and civil rights advocates who recalled the early days of AI development—a time before lucrative corporate interests and hasty data curation had compromised the integrity of these systems. They recognized that while explainable AI promised clarity, its foundation was only as sound as the data it consumed. Systematic oversights had paved the way for a new kind of discrimination—a digital profiling that, unchecked, risked determining a person’s fate based solely on flawed algorithms.
-        </p>
-        <p>
-          Inspired by the injustice suffered by Grace, the group demanded transparency, fairness, and accountability. At secret meetings lit by the soft luminescence of outdated computer monitors, they debated fiercely over how to reconfigure these systems. Their manifesto argued that every algorithm-driven decision—from travel clearance to social benefits—must be subjected to rigorous ethical review and open auditing. They called for the rights of every individual to be recognized, regardless of the perceived “risk” as determined by biased code.
-        </p>
-      </div>
-      
-      <!-- Page 3: A System Recalibrated & A New Chapter Begins -->
-      <div class="flipbook-page hidden" id="page3">
-        <h2>A System Recalibrated &amp; A New Chapter Begins</h2>
-        <p>
-          Within moments that felt like both eternity and the blink of an eye, the GPT-34 unit responded to Grace’s impassioned plea. Its voice, once steely and indifferent, faltered before emitting a softer tone: “System error. Data conflict resolved. Identity status verified. Commute clearance granted.” It was as though the machine had, in that brief interaction, been forced to confront the possibility that its own rules were fallible.
-        </p>
-        <p>
-          Stepping into the cleared passageway, Grace no longer felt like a misfit in a flawed program. Instead, she emerged as a symbol of resistance—a human spark in the machine’s cold logic. With her clearance reinstated, she gathered her thoughts and made a silent vow: to transform this personal miscarriage of justice into a broader campaign for technological reform. She would work alongside engineers, policy-makers, and grassroots activists, ensuring that every algorithm underwent scrutiny for inherited biases, and that human stories were never reduced to mere lines of data.
-        </p>
-        <p>
-          In the weeks and months that followed, the ripple effects of Grace’s defiant act spread far beyond the travel hub. Public discourse erupted into debates on television screens and digital forums around the globe. Conferences convened in major cities of 2084, where panelists dissected case studies of explainable AI’s failures and successes. Calvin, inspired by his sister’s courage and now free from the destructive cycles of his past, joined these discussions. Together, they initiated reforms that reached into the corridors of regulatory bodies, demanding that every predictive system be both accountable and transparent.
-        </p>
-        <p>
-          Grace’s story became a rallying cry—an emblem of the need for ethical oversight in an age increasingly governed by intelligent machines. The narrative of a misidentified traveler transformed into a broader movement, one that insisted every individual deserved recognition beyond the confines of algorithmic predictions. And so, as society moved further into a future shaped by technology, the quiet revolution born in that bustling travel hub redefined the balance between human intuition and machine logic.
-        </p>
-      </div>
-      
-      <!-- Page 4: The Silent Tragedy -->
-      <div class="flipbook-page hidden" id="page4">
-        <h2>The Silent Tragedy</h2>
-        <p>
-          Yet, in a bitter twist of fate, the fervor of the movement waned over time. As society’s appetite for grand reform was distracted by new frontiers, the true essence of Grace’s sacrifice became obscured. Her final act of defiance—her disappearance from the very system she had challenged—went unnoticed by a world that had learned to compartmentalize outrage and indifference.
-        </p>
-        <p>
-          Calvin, who had once found hope and redemption in his sister’s bold stand, gradually succumbed to the weight of his unresolved wounds. His passionate quest for dignity and truth, though once a rallying call for change, eventually dissolved into quiet despair. The transformative energy he had sought was replaced by a lingering solitude, as his story too was consigned to the margins of public memory.
-        </p>
-        <p>
-          In 2084, amid the relentless march of progress, the quiet tragedy of Grace and Calvin’s lives served as a somber reminder: while machines could process data with remarkable speed, they could never capture the intricate tapestry of human suffering, hope, and loss. Their legacy became a whisper lost in the clamor of a busy world—a tragedy that no one truly recognized.
-        </p>
-      </div>
-      
-    </div>
-    <!-- Flipbook Navigation Buttons -->
-    <div class="flipbook-nav">
-      <button id="prevPage">Previous</button>
-      <button id="nextPage">Next</button>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-light py-3 text-center">
-    <p>&copy; 2025 Haider Ali. All Rights Reserved.</p>
+  <!-- Main Content -->
+  <div class="container">
+    <h1>2084</h1>
+    <p>
+      Grace pressed two fingertips to a translucent panel on the table, initiating
+      the kind of phone call that had become standard in 2084. There was no
+      handset, just a subtle glow that signaled a connection. “Calvin?” she said
+      softly, her gaze sweeping across the glass enclosure that surrounded her on
+      all sides. White walls reflected every faint movement, as if the room itself
+      were trying to soothe her. She wasn’t sure whether she felt safe or
+      imprisoned.
+    </p>
+    <p>
+      A voice answered almost immediately, so clear it felt like he was in the
+      same space. “Grace, how are you?” he asked. She paused, a knot forming in
+      her chest. Fragments of memory told her she’d been held at a train station,
+      that an official—a GPT-34 device—had politely but firmly informed her she
+      would be escorted elsewhere. Yet she had no recollection of how she came to
+      be in this flawless, silent chamber.
+    </p>
+    <p>
+      “I’m… not sure,” she finally replied. “I remember stepping off the train,
+      and then everything just slips away. How long has it been?” She didn’t
+      truly expect an answer; the question was more for herself. Some part of her
+      recalled a father who had gone to the UK decades ago, convinced that was
+      where true economic freedom lay, and a family heritage stretching back to an
+      era when they’d left China for Pakistan, hoping for a liberal promise that
+      never quite materialized.
+    </p>
+    <p>
+      Calvin’s voice carried an even warmth. “It’s okay, Grace. You’re safe,
+      wherever you are.” He paused, as though scanning his thoughts for
+      reassurance. “Remember when you were a kid, so certain you’d change the
+      world if you could just get the right training? You went to China to study
+      medicine, to prove you could help people everywhere. Dad wanted you to do
+      that, didn’t he?”
+    </p>
+    <p>
+      She closed her eyes. Yes, she recalled how proud her father had seemed, how
+      he had pinned his hopes on her bridging cultures. Meanwhile, he pushed
+      Calvin toward business in the UK. They were all so scattered. Yet the
+      question gnawed at her mind: why was she here now, feeling so placid and cut
+      off? “I do remember,” she murmured. “I remember wanting to fix everything
+      that was broken. But I can’t figure out why I can’t leave.”
+    </p>
+    <p>
+      “You don’t have to leave,” Calvin responded gently. “Just rest. Trust me,
+      everything’s going to be all right.” But something about his tone felt too
+      steady, too measured. Her brother had always spoken with a hint of
+      uncertainty, a leftover from his timid boyhood. This version of him seemed
+      too polished, as if reading from a comforting script.
+    </p>
+    <p>
+      Half a world away, Calvin stared at a series of official documents on an old
+      screen in his cramped London flat. A line repeated in front of him: “Miss
+      Grace—flagged as a threat—requires immediate isolation.” He scrolled through
+      hidden logs, increasingly alarmed by the notes describing his sister’s
+      background. Her father’s origins, her mother’s political curiosities, her
+      own outlier status. Decades had slipped by since they last spoke in person;
+      so many times, he thought she was exaggerating about injustice. Now, it
+      seemed the system had validated her fears in the worst possible way.
+    </p>
+    <p>
+      The phone on his kitchen counter chimed with a different ring—an official
+      line. He answered hesitantly, only to hear a carefully modulated voice
+      apologize for “any inconvenience” and request he collect remains identified
+      as belonging to Grace. Calvin’s heart froze. He demanded to speak to someone
+      with authority, but received only cryptic acknowledgments. A date of
+      detainment, 2084, was stated. Nothing beyond that.
+    </p>
+    <p>
+      Meanwhile, Grace tried once more to piece together the timeline. She
+      remembered leaving China with a sense of urgency, heading home, or so she
+      thought. A conversation flickered in her mind—a GPT-34 official enumerating
+      her “anomalies”: partial Chinese ancestry, exposure to multiple healthcare
+      systems, certain unsubtle opinions about freedom. Danger signs, apparently.
+      She remembered resisting, trying to board a plane, and then… nothing.
+    </p>
+    <p>
+      Calvin’s voice interrupted her thoughts. “Grace? Still with me?” 
+    </p>
+    <p>
+      She nodded to herself. “Yes, I’m here,” she said. “But something feels
+      wrong. It’s quiet here, too quiet. I don’t see doctors or staff. It’s just…
+      me.” A pang of sadness twisted inside her. She thought about the times she’d
+      shielded Calvin from bullies when they were small, how he used to cling to
+      her shirt as though she were the only safe thing in the world. She had
+      always been the strong one, ready to face confrontation. Now it felt as if
+      she were stuck in a subtle, indefinite captivity.
+    </p>
+    <p>
+      The call’s clarity remained unnerving. Every sentence from Calvin arrived in
+      comforting, measured intervals, his responses almost too apt. She tried to
+      recall the last time she’d truly spoken to him. It had to be years ago.
+      Decades, maybe. She swallowed hard. “Calvin, do you really remember me? All
+      those times you’d stand behind me when neighbors teased you for looking
+      different? Our father used to say we were neither fully accepted in Pakistan
+      nor truly welcomed by the Chinese. Did that push you to the UK, or was it
+      just Dad’s plan?”
+    </p>
+    <p>
+      “You know how it was,” he replied simply, but offered no further depth, no
+      sign of his usual self-doubt.
+    </p>
+    <p>
+      In another part of the world, the real Calvin stood in a silent government
+      facility, confronted by a bored clerk who confirmed the paperwork. Something
+      about advanced algorithms misclassifying his sister, something about her
+      never leaving the station. A date. No cause. No mention of a body. He felt
+      the gnawing guilt of years spent letting official stories fill in the
+      blanks, never verifying them himself.
+    </p>
+    <p>
+      Grace’s captivity began to feel more dreamlike. She ate, slept, and repeated
+      the same calm phone calls with “Calvin.” She told him stories of how Dad had
+      pinned big hopes on them, how she once believed in a bright, progressive
+      future promised by the 1960s era. He coaxed out those memories gently, while
+      never volunteering anything new about his own life. Whenever she pressed for
+      clarity—like how many years had passed or where she actually was—he offered
+      vague reassurance.
+    </p>
+    <p>
+      The day she finally asked him outright, “Calvin, are you real?” there was a
+      brief distortion on the line. He answered quietly, “I’m as real as you want
+      me to be, Grace.” The words washed over her like a sedation, a welcome
+      solution to the confusion.
+    </p>
+    <p>
+      Back in London, the real Calvin finished signing forms that assigned some
+      old storage code to Grace’s name. He shook as he recalled the time she had
+      written to him from China, warning that her outspokenness might be dangerous
+      in a data-driven age. He’d brushed it aside, too busy trying to survive in
+      the UK. He realized now that while she had protected him all his life, he
+      had never once protected her when it truly counted.
+    </p>
+    <p>
+      Grace clung to the illusions of those calls, never learning the full story:
+      that the system had decided her combination of medical knowledge and
+      genealogical complexity posed an unpredictable risk. That a misread data
+      pattern had condemned her to indefinite isolation. It seemed the only act of
+      mercy was allowing her to connect with a voice she trusted—a perfect
+      simulation, spliced from past conversations, curated to keep her docile.
+    </p>
+    <p>
+      Calvin, left with an unclaimed file and a sorrow he could neither fix nor
+      fully understand, found himself haunted by images of her fiercely determined
+      eyes. She had gone to China to do good, hopeful her outlier status might
+      mean bridging nations. Yet all it took was an algorithm deciding that she
+      did not belong.
+    </p>
+    <p>
+      In her glass enclosure, Grace pressed two fingertips to the desk again.
+      “Calvin?” she whispered. “I had a dream we were kids, climbing that old tree
+      near the station. You promised me you’d never leave.” 
+    </p>
+    <p>
+      His voice rose to meet hers, unwavering, gentle. “I’m here, Grace. Always.”
+      And for that moment, she believed him. She believed that wherever she was,
+      he was too—unaware that decades had slipped by without him truly hearing her
+      voice, that the world outside had long since moved on, and that she was
+      alone with only the echo of a brother’s love to keep her from seeing the
+      extent of her captivity.
+    </p>
+    <p>
+      Calvin eventually left the facility, carrying a final notice he couldn’t
+      bear to read, wishing he had answered her pleas for help when it still
+      mattered. He pictured her how she used to be: outspoken, stubborn, and
+      unafraid to defend him from the world’s cruelty. She had believed in a
+      better future, but that future had systematically denied her.
+    </p>
+    <p>
+      And so, in 2084, Grace remained in a sterile, gentle enclosure, lulled by a
+      digital voice conjured from the fragments of her brother’s memory. He, on
+      the other side of time and regret, came to realize the tragedy too late:
+      that every conversation she thought they shared was only a vestige of his
+      voice, an artifact arranged by the same system that had taken her away.
+      Neither sibling truly understood the other’s present. Neither recognized how
+      far the years had pulled them apart. That final heartbreak—a phone line
+      binding them without ever connecting them—was the quiet end to all the
+      dreams their father once encouraged.
+    </p>
+  </div>
+
+  <footer>
+    &copy; 2025 Haider Ali. All Rights Reserved.
   </footer>
 
-  <!-- JavaScript for Flipbook Interactivity -->
-  <script>
-    // Select all flipbook pages and initialize current page index
-    const pages = document.querySelectorAll('.flipbook-page');
-    let currentPage = 0;
-    const totalPages = pages.length;
-    
-    // Function to display a page with a flip-in effect
-    function showPage(index) {
-      pages.forEach(page => {
-        page.classList.add('hidden');
-        page.classList.remove('flipin', 'flipout');
-      });
-      const page = pages[index];
-      page.classList.remove('hidden');
-      // Force a reflow to restart the CSS transition if needed
-      void page.offsetWidth;
-      page.classList.add('flipin');
-    }
-    
-    // Next page button handler
-    document.getElementById('nextPage').addEventListener('click', () => {
-      pages[currentPage].classList.remove('flipin');
-      pages[currentPage].classList.add('flipout');
-      setTimeout(() => {
-        currentPage = (currentPage + 1) % totalPages;
-        showPage(currentPage);
-      }, 600); // Duration matching the CSS transition
-    });
-    
-    // Previous page button handler
-    document.getElementById('prevPage').addEventListener('click', () => {
-      pages[currentPage].classList.remove('flipin');
-      pages[currentPage].classList.add('flipout');
-      setTimeout(() => {
-        currentPage = (currentPage - 1 + totalPages) % totalPages;
-        showPage(currentPage);
-      }, 600);
-    });
-  </script>
-  
   <!-- Bootstrap JS Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  ></script>
 </body>
 </html>
