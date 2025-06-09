@@ -31,3 +31,9 @@ footer {
   background-color: #222;
   color: #fff;
 }
+
+/* Highlight timeline item when expanded */
+.timeline-item.expanded .timeline-content {
+  background-color: #eef4ff;
+  box-shadow: 0 0 10px rgba(0, 86, 179, 0.2);
+}
